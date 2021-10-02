@@ -1,0 +1,317 @@
+:root {
+  --primary-blue: #0074be;
+  --secondary-blue: #0089ca;
+  --gray: #f7f7f7;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 15%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+nav header {
+  text-align: center;
+  color: var(--primary-blue);
+  padding: 1.5rem 1rem;
+  border-bottom: 4px solid var(--primary-blue);
+}
+
+.css-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  padding: 1rem 0;
+}
+
+nav ul li + li {
+  margin-top: 0.5rem;
+}
+
+nav ul a {
+  font-size: 1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul a:hover {
+  background: var(--primary-blue);
+  color: #fff;
+}
+
+nav footer {
+  width: 100%;
+  padding: 0 0.75rem 1rem;
+  margin-top: auto;
+}
+
+nav footer,
+main footer {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+nav footer a,
+main a {
+  color: var(--primary-blue);
+}
+
+nav footer a:hover,
+main a:hover {
+  text-decoration: underline;
+}
+
+main footer {
+  padding-top: 2.5rem;
+}
+
+main {
+  margin-left: 15%;
+  padding: 2.5rem;
+  background: var(--gray);
+}
+
+section {
+  background: #fff;
+  padding: 2rem 2rem 0;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+section p {
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-grid {
+  margin: 2rem auto 1rem;
+}
+
+.video-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+}
+
+code {
+  background: var(--gray);
+  font-size: 1rem;
+  padding: 0 5px;
+  font-family: monospace;
+}
+
+.code-editor {
+  background-color: var(--gray);
+  margin-top: 1rem;
+  border-left: 5px solid var(--primary-blue);
+  padding: 0 0.5rem 1.5rem 1.5rem;
+  overflow-x: auto;
+}
+
+.code-editor code {
+  white-space: pre-line;
+}
+
+.css-selector {
+  color: #005a38;
+}
+
+.css-property {
+  color: #a30008;
+  white-space: pre;
+}
+
+.css-function {
+  color: #db000e;
+}
+
+.css-areas {
+  white-space: pre;
+}
+
+.note {
+  background-color: #ddeaff;
+  border-left: 5px solid var(--secondary-blue);
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.note p {
+  padding: 0;
+}
+
+section ul {
+  list-style-position: inside;
+  margin-top: 1rem;
+}
+
+section ul li + li {
+  margin-top: 1rem;
+}
+
+section:last-of-type {
+  padding-bottom: 2rem;
+}
+  
+@media screen and (max-width: 1600px) {
+  nav {
+    width: 20%;
+  }
+
+  main {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    width: 25%;      
+  }
+
+  main {
+    margin-left: 25%;
+  }
+}
+
+@media screen and (max-width: 1100px) and (orientation: landscape) {
+  nav {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    position: absolute;
+    height: 14.5rem;
+    width: 100%;
+    text-align: center;  
+    display: block;  
+  }
+
+  @keyframes arrow {
+    to {
+      transform: translateY(1rem);
+    }
+  }
+
+  nav::before {
+    position: absolute;
+    content: "↓";
+    bottom: 20%;
+    right: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+    animation: arrow 0.5s ease-in-out infinite alternate;
+  }
+
+  nav header {
+    padding: 1rem;
+  }
+
+  .css-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    padding: 0.5rem 0;
+  }
+
+  nav ul li + li {
+    margin-top: 0rem;
+  }
+
+  nav footer {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main {
+    margin-left: 0;
+    margin-top: 14.5rem;
+    padding: 1rem;
+  }
+
+  section, main footer {
+    padding: 1rem 1rem 0;
+  }  
+
+  .img-grid {
+    margin: 1rem auto 0;
+  }
+
+  .video-section {
+    padding-top: 1rem;
+  }
+
+  section:last-of-type {
+    padding-bottom: 1rem;
+  }
+}
