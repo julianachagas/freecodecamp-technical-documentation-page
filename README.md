@@ -1,4 +1,4 @@
-# FreeCodeCamp - Technical Documentation Page
+# freeCodeCamp - Technical Documentation Page
 
 Project created for the Responsive Web Design Certification from [freeCodeCamp](https://www.freecodecamp.org/learn).
 
@@ -65,6 +65,8 @@ In this project, `white-space: pre-line` was used in the `code` tag to collapse 
 
 <img src="screenshots/code.png" alt=""/> <br/>
 
+HTML
+
 ```html
 <div class="code-editor">
   <code>
@@ -75,6 +77,7 @@ In this project, `white-space: pre-line` was used in the `code` tag to collapse 
   </code>
 </div>
 ```
+CSS
 
 ```css
 .code-editor {
